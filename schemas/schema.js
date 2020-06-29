@@ -23,7 +23,7 @@ const RootQuery = new GraphQLObjectType({
       type: UserType,
       args: { id: { type: GraphQLString } },
       resolve(parentValue, args) {
-        lodash.find(users, { id: args.id });
+        return lodash.find(users, { id: args.id });
       },
     },
   },
